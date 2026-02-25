@@ -20,7 +20,7 @@
           document.getElementById("third").innerHTML = trimmedFeedback.replace("FOOD", "ambience");
 
           var pos = trimmedFeedback.indexOf("service");
-          document.getElementById("pos").innerHTML = pos;
+          document.getElementById("pos").innerHTML = (`position of 'service': ${pos}`);
 
      
         var output = trimmedFeedback.split(" ");
