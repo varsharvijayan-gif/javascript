@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userProfile={
+            username:" coolUser99 ",
+            bio:" I LOVE coding! JavaScript is Great!!! "
+        };
+        function cleanUserBio(profile){
+            let cleanedUsername = profile.username.trim().toLowerCase();
+             
+            let cleanedBio = profile.bio.trim().toLowerCase().replace("javascript", "JS");
+            let countCleanedBio = cleanedBio.length;
+; 
+            return {
+                username: cleanedUsername,
+                bio: cleanedBio,
+                bioLength: countCleanedBio
+            };
+        }
+
+   let result = cleanUserBio(userProfile);
+   
+   console.log(result);
+    </script>
+</body>
+</html>
