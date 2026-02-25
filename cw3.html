@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Feedback Analysis</h1>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <p id="pos"></p>
+    <p id="array"></p>
+    <script>
+      var feedback = "   I loved the FOOD and the service!   ";
+          var trimmedFeedback = feedback.trim(); 
+          document.getElementById("first").innerHTML = trimmedFeedback;
+          document.getElementById("second").innerHTML =trimmedFeedback.toLowerCase();
+          document.getElementById("third").innerHTML = trimmedFeedback.replace("FOOD", "ambience");
+
+          var pos = trimmedFeedback.indexOf("service");
+          document.getElementById("pos").innerHTML = pos;
+
+     
+        var output = trimmedFeedback.split(" ");
+        document.getElementById("array").innerHTML = output;
+    </script>
+  
+</body>
+</html>

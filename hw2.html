@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="contact1Info"></p>
+    <p id="contact2Info"></p>
     <script>
        let contact1={
             name:"Kevin",
@@ -18,7 +20,7 @@
         
         }
         function printContactInfo(contactObj) {
-            console.log(contactObj.getInfo());
+            document.getElementById("contact1Info").innerHTML= contactObj.getInfo();
         }
         printContactInfo(contact1);
 
@@ -32,7 +34,7 @@
             }
           }
             function printContactInfo2(contactObj) {
-                console.log(contactObj.getInfo());
+               document.getElementById("contact2Info").innerHTML= contactObj.getInfo();
             }
             printContactInfo2(contact2);
     </script>
