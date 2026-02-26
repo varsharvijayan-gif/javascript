@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game Result Generator</h1>
+    <p id="mysteryLevelDisplay"></p>
+    <p id="userscore"></p>
+    <p id="abs"></p>
+    <p id="sqr"></p>
+    <p id="imp"></p>
+    <p id="highest"></p>
+    <p id="lowest"></p>
+    <script>
+      let mysteryLevel = Math.floor(Math.random() * 50);
+      document.getElementById("mysteryLevelDisplay").innerText ="Mystery Level: " + mysteryLevel;
+      
+      let userScore = "45";
+      let numericUserScore = Number(userScore);
+      document.getElementById("userscore").innerText = "User Score: " + numericUserScore;
+
+     let absoluteDifference = Math.abs(mysteryLevel - numericUserScore);
+     document.getElementById("abs").innerText = "Difference: " + absoluteDifference;
+    
+    let squareRoot = Math.sqrt(userScore);
+    document.getElementById("sqr").innerText += "Square Root: " + squareRoot;
+    
+    let implicitResult = "20" * 5;
+    document.getElementById("imp").innerText += "Implicit Result: " + implicitResult;
+    
+    let highest = Math.max(10, 20, mysteryLevel);
+    let lowest = Math.min(10, 20, mysteryLevel);
+    document.getElementById("highest").innerText = "Highest: " + highest;
+    document.getElementById("lowest").innerText = "Lowest: " + lowest;
+
+    </script>
+
+
+</body>
+</html>
