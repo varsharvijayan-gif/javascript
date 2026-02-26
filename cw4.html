@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Statistic Widget</h2>
+
+<p id="randomnumber"></p>
+<p id="userscore"></p>
+<p id="difference"></p>
+
+<p id="roundedsqaureroot"></p>
+
+<p id="pi"></p>
+<p id="mul"></p>
+
+<script>
+var randomnumber = Math.floor(Math.random() * 100);
+document.getElementById("randomnumber").innerHTML = "Random Number: "+randomnumber;
+
+var userScore ="75";
+var result=Number(userScore);
+document.getElementById("userscore").innerHTML = "User Score: "+result;
+console.log("The data type of result is "+typeof(result));
+  
+var difference = result - randomnumber;
+document.getElementById("difference").innerHTML = "The difference between user score and random number is: "+difference;
+
+document.getElementById("roundedsqaureroot").innerHTML = "Rounded Square Root: "+Math.round(Math.sqrt(result));
+   
+document.getElementById("pi").innerHTML = "Value of PI: "+Math.PI;
+
+
+var multiplied = 50 * 2;
+document.getElementById("mul").innerHTML = "The multiplied value is "+multiplied;
+
+
+</script>
+
+</body>
+</html>

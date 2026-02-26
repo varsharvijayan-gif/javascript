@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistics Widget</title>
+</head>
+<body>
+
+    <h2>Statistics Result</h2>
+    <div id="output"></div>
+
+    <script>
+        // Generate random number between 1 and 100
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        // User score as string
+        let userScore = "75";
+
+        // Convert string to number
+        let convertedScore = Number(userScore);
+
+        // Difference
+        let difference = randomNumber - convertedScore;
+
+        // Rounded square root
+        let squareRoot = Math.round(Math.sqrt(convertedScore));
+
+        // PI value
+        let piValue = Math.PI;
+
+        // Implicit conversion
+        let implicitResult = "50" * 2;
+
+        // Display using innerHTML
+        document.getElementById("output").innerHTML =
+            "Random Number: " + randomNumber + "<br>" +
+            "User Score (String): " + userScore + "<br>" +
+            "Converted Score: " + convertedScore + "<br>" +
+            "Difference: " + difference + "<br>" +
+            "Rounded Square Root: " + squareRoot + "<br>" +
+            "Value of PI: " + piValue + "<br>" +
+            "Implicit Conversion Result: " + implicitResult;
+    </script>
+
+</body>
+</html>
