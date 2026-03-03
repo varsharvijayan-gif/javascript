@@ -7,11 +7,16 @@
 </head>
 <body>
     <script>
-    var num1=Number( prompt("Enter the first number:"));
-    var num2= Number( prompt("Enter the second number:"));
-    var num3= Number( prompt("Enter the third number:"));
-    var result =(num1 + num2) * num3;
-    console.log("The result of (num1 + num2) * num3 is: " + result);
+        function sumMul() {
+            return((num1+num2)*num3) ;
+        }
+        let num1 = Number(prompt("ENter a number:"));
+        let num2 = Number(prompt("ENter a number:"));
+        let num3 = Number(prompt("ENter a number:"));
+
+        let result = sumMul();
+        alert("Result:"+ result)
+
     </script>
 </body>
 </html>
