@@ -7,13 +7,17 @@
 </head>
 <body>
     <script>
+        function swapNum() {
+             console.log("After swapping: a=" + a + "b=" + b);
+        }
     var a=Number( prompt("Enter the first number:"));
     var b= Number( prompt("Enter the second number:"));
-    console.log("Before swapping: a = " + a + ", b = " + b);
     var temp = a;
-    a = b;
-    b = temp;
-    console.log("After swapping: a = " + a + ", b = " + b);
-    </script>
+    a=b;
+    b=temp;
+
+   swapNum(a,b);
+
+  </script>
 </body>
 </html>
