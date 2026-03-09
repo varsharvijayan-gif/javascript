@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+let chances = 0;
+let output = "";
+
+while (chances < 5) {
+
+    let num = Number(prompt("Enter a number between 1 and 5"));
+
+    // check invalid input
+    if (num < 1 || num > 5) {
+        output += "Invalid input<br>";
+        continue; // skip this chance
+    }
+
+    chances++;
+
+    // convert number to word
+    let word = "";
+    switch(num){
+        case 1:
+            word = "One";
+            break;
+        case 2:
+            word = "Two";
+            break;
+        case 3:
+            word = "Three";
+            break;
+        case 4:
+            word = "Four";
+            break;
+        case 5:
+            word = "Five";
+            break;
+    }
+
+    output += "You entered: " + word + "<br>";
+
+    // check correct guess
+    if (num == 3) {
+        output += "You guessed it right!";
+        break;
+    } else {
+        output += "Wrong guess. Try again.<br>";
+    }
+}
+
+if (chances == 5) {
+    output += "Game over";
+}
+
+document.getElementById("demo").innerHTML = output;
+</script>
+
+</body>
+</html>

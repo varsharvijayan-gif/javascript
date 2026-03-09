@@ -12,11 +12,14 @@
     <p id="condition"></p>
     <script>
         var today =new Date();
-        var dat = new Date("2025-08-13");
+        var dat = new Date("2025-08-3");
+        console.log(dat)
         var year =dat.getFullYear();
+        console.log(year)
         var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
         var month =  months[dat.getMonth()];
         var day = dat.getDay();
+        console.log(day)
         document.getElementById("demo").innerHTML = year +", " + month + ", " + day ;
         
         var yearCount = today.getFullYear -year;
