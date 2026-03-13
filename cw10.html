@@ -9,7 +9,7 @@
     <script>
         let jsonUser = {"name":"kevin","email":"kevin@gmail.com","message":"Hello"}
         try {
-            let json = JSoon.parse('{"name":"kevin","email":"kevin@gmail.com","message":"Hello"}');
+            let json = JSON.parse('{"name":"kevin","email":"kevin@gmail.com","message":"Hello"}');
             
             var message = () => {
             console.log("Message from " + json.name);

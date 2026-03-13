@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Feedback Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    <script>
+          try{
 
-<h2>Feedback Result</h2>
-<p id="result"></p>
-
-<script>
-  const jsonString = '{"name":"John","feedback":"Thank you for your support"}';
-
-  try {
-
-    const data = JSON.parse(jsonString);
-
-    const checkFeedback = (text) => {
-      return /thank/i.test(text);
-    };
-
-     if (checkFeedback(data.feedback)) {
-      document.getElementById("result").innerText = "Positive feedback received";
-    } else {
-      document.getElementById("result").innerText = "Feedback noted";
-    }
-
-  } catch (error) {
-    document.getElementById("result").innerText = "Invalid JSON format";
-  }
-</script>
-
+            let feedbackJson = {"message":"Thank you for your service"};
+            let feedback = JSON.parse('{"message":"Thank you for your service"}');
+            let checkMessage = feedback.message;
+            let check = () => {
+              let x = checkMessage.match(/thank/ig);
+             
+              if(x.length!=0) {
+                console.log("Positive feedback recieved.");
+              }else{
+                console.log("Negative feedback recieved.");
+              }
+              
+            };
+            check();
+        
+         }
+         catch (error) {
+            console.log("Error:Invalid");
+         }
+    </script>
 </body>
 </html>
