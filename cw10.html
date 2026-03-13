@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jsonUser = {"name":"kevin","email":"kevin@gmail.com","message":"Hello"}
+        try {
+            let json = JSoon.parse('{"name":"kevin","email":"kevin@gmail.com","message":"Hello"}');
+            
+            var message = () => {
+            console.log("Message from " + json.name);
+           };
+           message();
+        }
+           catch (error)
+            {
+              console.log("Error: Invalid JSOn");
+           }
+
+        
+
+    </script>
+</body>
+</html>
