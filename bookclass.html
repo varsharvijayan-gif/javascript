@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class Book {
+  constructor(title, author, price) {
+    this.title = title;
+    this.author = author;
+    this.price = price;
+  }
+
+  getTitle() {
+    return this.title;
+  }
+
+  getAuthor() {
+    return this.author;
+  }
+
+  setPrice(newPrice) {
+    if (typeof newPrice === "number" && newPrice > 0) {
+      this.price = newPrice;
+      console.log("Price updated successfully.");
+    } else {
+      console.log("Invalid price. Price must be a number greater than 0.");
+    }
+  }
+
+  
+  displayDetails() {
+    console.log("Title:", this.title);
+    console.log("Author:", this.author);
+    console.log("Price:", this.price);
+  }
+}
+
+
+const book1 = new Book("The Alchemist", "Paulo Coelho", 500);
+
+// Try updating price with valid value
+book1.setPrice(600);
+
+// Try updating price with invalid values
+book1.setPrice(-50);
+book1.setPrice("abc");
+
+// Print final book details
+console.log("\nFinal Book Details:");
+book1.displayDetails();
+    </script>
+</body>
+</html>
