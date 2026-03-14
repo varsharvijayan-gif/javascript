@@ -13,15 +13,32 @@
             this.age = age;
             this.email = email;
         }
-        getuserName(){
+        getName(){
             return this.name;
         }
-        getuserAge(){
+        getAge(){
             return this.age;
         }
-        set 
+        setEmail(x){
+            if(x.includes("@")) {
+                this.email =x;
+                console.log("Email updated");
+            }else{
+                console.log("Invalid email");
+            }
+        }
 
       }
+      const User1 = new User("varsha",28,"varsharvijayan@gmail.com");
+      User1.setEmail("varshagmai.com");
+      User1.setEmail("sreelalsj@gmail.com");
+      console.log("\nUSER Details");
+      console.log("Name:", User1.getName());
+console.log("Age:", User1.getAge());
+console.log("Email:", User1.email);
+
+
+
     </script>
 </body>
 </html>
