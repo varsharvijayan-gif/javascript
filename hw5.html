@@ -6,12 +6,25 @@
     <title>Profile Page</title>
 </head>
 <body>
+    <p id="result"></p>
+    <p id="userage"></p>
+    <button onclick="checkAccess()">Check</button>
     <script>
-      let userName = "JohnDoe";
-        let userAge = 30;
-        let isAdmin = false;
-        
-   console.log((userAge >=18) && (isAdmin == true))
+      function checkAccess() { 
+      let user={ 
+        userName :"JohnDoe",
+        userAge: 30,
+        isAdmin:false
+        };
+
+    let message = (user.userAge>=18 && user.isAdmin==true) ? 
+              "Access Granted":"Access Denied";
+    document.getElementById("result").innerHTML = message;         
+    document.getElementById("userage").innerHTML ="User Age Exist or not: " + ("userAge" in user);    
+    delete user.userAge;
+    console.log(user);
+    }
+  
 
 
        
