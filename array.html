@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="demo"></p>
+<p id="demo_2"></p>
+<p id="demo_1"></p>
+<p id="demo_3"></p>
+<p id="demo_4"></p>
+<p id="demo_5"></p>
+<body>
+
+    <script>
+        var fruits = ["apple","orange","banana","mango"];
+        document.getElementById("demo").innerHTML = fruits;
+        document.getElementById("demo_2").innerHTML = fruits[0];
+        fruits[0] ="papaya";
+        document.getElementById("demo_3").innerHTML = fruits;
+        document.getElementById("demo_4").innerHTML = fruits.length;
+        var last = fruits[fruits.length-1];
+        document.getElementById("demo_5").innerHTML = last;
+
+
+        var vegetables = new Array("potato","brocolli","cucumber");
+        document.getElementById("demo_1").innerHTML = vegetables;
+    </script>
+</body>
+</html>
