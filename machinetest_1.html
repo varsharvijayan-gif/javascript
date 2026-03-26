@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+<body class="d-flex justify-content-center align-items-center" style="height:100vh;">
+
+<div class="card bg-primary" style="width:400px; height:400px" >
+    
+<h2 style="text-align: center;">Calculator</h2>
+   <div class="card-body">
+
+<input type="number" id="num1" placeholder="Enter first number"><br><br>
+<input type="number" id="num2" placeholder="Enter second number"><br><br>
+
+<select id="operator">
+  <option value="add">+</option>
+  <option value="sub">-</option>
+  <option value="mul">*</option>
+  <option value="div">/</option>
+</select><br><br>
+
+<button class="btn btn-light" onclick="calculate()">=</button><br><br>
+
+<p id="result"></p>
+   </div>
+
+<script>
+
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b == 0) {
+        return "Cannot divide by zero";
+    }
+    return a / b;
+}
+
+function printResult(result) {
+    document.getElementById("result").innerHTML = "Result: " + result;
+}
+
+function calculate() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let operator = document.getElementById("operator").value;
+
+    let result;
+
+    if (operator === "add") {
+        result = add(num1, num2);
+    } 
+    else if (operator === "sub") {
+        result = subtract(num1, num2);
+    } 
+    else if (operator === "mul") {
+        result = multiply(num1, num2);
+    } 
+    else if (operator === "div") {
+        result = divide(num1, num2);
+    }
+
+    document.getElementById("result").innerHTML="Result: " + result;
+}
+</script>
+
+</body>
+</html>
