@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Winner</title>
+
+    <!-- Bootstrap 4 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5 text-center">
+    <h2>Lottery System</h2>
+
+    <!-- Button -->
+    <button class="btn btn-success mt-3" onclick="pickWinner()">Pick Winner</button>
+
+    <!-- Result in HTML -->
+    <h4 id="result" class="mt-4"></h4>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="winnerModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <h5 class="modal-title">Winner 🎉</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3 id="modalResult"></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Lottery Array
+    const tickets = [101, 205, 309, 412, 578, 689];
+
+    function pickWinner() {
+        // Random index
+        let randomIndex = Math.floor(Math.random() * tickets.length);
+        let winner = tickets[randomIndex];
+
+        // 1. Console
+        console.log("Winner:", winner);
+
+        // 2. HTML (Red color using DOM)
+        let result = document.getElementById("result");
+        result.innerText = "Winner: " + winner;
+        result.style.color = "red";
+
+        // 3. Modal (Change color using DOM)
+        let modalText = document.getElementById("modalResult");
+        modalText.innerText = "Winner: " + winner;
+        modalText.style.color = "red";
+
+        // Show modal
+        $('#winnerModal').modal('show');
+    }
+</script>
+
+</body>
+</html>
